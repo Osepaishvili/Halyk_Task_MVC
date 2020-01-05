@@ -13,7 +13,9 @@ using HTO.Configuration;
 using HTO.Identity;
 using HTO.Web.Resources;
 using Abp.AspNetCore.SignalR.Hubs;
-
+using Microsoft.AspNetCore.Http;
+using HTO.EntityFrameworkCore.Repositories;
+using HTO.Employee;
 
 namespace HTO.Web.Startup
 {
@@ -39,6 +41,10 @@ namespace HTO.Web.Startup
             services.AddScoped<IWebResourceManager, WebResourceManager>();
 
             services.AddSignalR();
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddTransient<ICustomUnitOfWork, CustomUnitOfWork>();
+            services.AddTransient<BaseEmployeeAppService, EmployeeAppService>();
 
             // Configure Abp and Dependency Injection
             return services.AddAbp<HTOWebMvcModule>(
