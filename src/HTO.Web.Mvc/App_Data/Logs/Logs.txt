@@ -366,3 +366,78 @@ INFO  2020-01-04 15:43:44,518 [11   ] soft.AspNetCore.Hosting.Internal.WebHost -
 INFO  2020-01-04 15:43:46,909 [25   ] .AspNetCore.SignalR.HubConnectionContext - Completed connection handshake. Using HubProtocol 'json'.
 DEBUG 2020-01-04 15:43:47,202 [25   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is connected: {"ConnectionId":"hXhCC6SJS1XnMpMtVAhtwg","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2020-01-04T15:43:47.1052291+04:00","Properties":{}}
 DEBUG 2020-01-04 15:43:47,532 [25   ] Abp.AspNetCore.SignalR.Hubs.AbpCommonHub - A client is registered: hXhCC6SJS1XnMpMtVAhtwg
+DEBUG 2020-01-05 17:37:37,393 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-01-05 17:37:37,435 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-01-05 17:37:37,456 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: HTO.Web.Startup.HTOWebMvcModule, HTO.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-05 17:37:37,460 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: HTO.HTOWebCoreModule, HTO.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-05 17:37:37,460 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: HTO.HTOApplicationModule, HTO.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-05 17:37:37,460 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: HTO.HTOCoreModule, HTO.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-05 17:37:37,461 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=4.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-05 17:37:37,461 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=4.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-05 17:37:37,461 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=4.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-05 17:37:37,463 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=4.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-05 17:37:37,464 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: HTO.EntityFrameworkCore.HTOEntityFrameworkModule, HTO.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-05 17:37:37,465 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=4.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-05 17:37:37,465 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=4.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-05 17:37:37,466 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=4.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-05 17:37:37,466 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=4.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-05 17:37:37,466 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=4.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-05 17:37:37,466 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=4.9.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-05 17:37:37,470 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2020-01-05 17:37:37,540 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-01-05 17:37:37,540 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-01-05 17:37:37,540 [1    ] o.Configuration.LanguageManagementConfig - Converted HTO (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-01-05 17:37:37,540 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-01-05 17:37:38,159 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: HTO.EntityFrameworkCore.HTODbContext, HTO.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-01-05 17:37:38,736 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-01-05 17:37:38,788 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-01-05 17:37:38,812 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-01-05 17:37:38,824 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: HTO
+DEBUG 2020-01-05 17:37:38,833 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-01-05 17:37:38,931 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-01-05 17:37:38,974 [1    ] rization.Users.UserTokenExpirationWorker - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker
+DEBUG 2020-01-05 17:37:39,037 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2020-01-05 17:37:39,037 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - HTO.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-01-05 17:37:39,047 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - HTO.Users.Dto.CreateUserDto
+DEBUG 2020-01-05 17:37:39,048 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - HTO.Users.Dto.UserDto
+DEBUG 2020-01-05 17:37:39,049 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - HTO.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-01-05 17:37:39,049 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - HTO.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-01-05 17:37:39,050 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - HTO.Roles.Dto.PermissionDto
+DEBUG 2020-01-05 17:37:39,050 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - HTO.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-01-05 17:37:39,050 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - HTO.MultiTenancy.Dto.TenantDto
+DEBUG 2020-01-05 17:37:39,050 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - HTO.Web.Views.Shared.Components.TenantChange.TenantChangeViewModel
+DEBUG 2020-01-05 17:37:39,050 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - HTO.Web.Models.Roles.EditRoleModalViewModel
+INFO  2020-01-05 17:37:52,878 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:62114/  0
+INFO  2020-01-05 17:37:52,878 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/  
+INFO  2020-01-05 17:38:00,127 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action HTO.Web.Controllers.HomeController.Index (HTO.Web.Mvc)
+INFO  2020-01-05 17:38:00,127 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing action HTO.Web.Controllers.HomeController.Index (HTO.Web.Mvc)
+WARN  2020-01-05 17:38:01,132 [12   ] Mvc.Authorization.AbpAuthorizationFilter - Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(IEnumerable`1 authorizeAttributes) in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 42
+   at Abp.Authorization.AuthorizationHelper.CheckPermissions(MethodInfo methodInfo, Type type) in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 107
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(MethodInfo methodInfo, Type type) in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 56
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context) in D:\Github\aspnetboilerplate\src\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(IEnumerable`1 authorizeAttributes) in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 42
+   at Abp.Authorization.AuthorizationHelper.CheckPermissions(MethodInfo methodInfo, Type type) in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 107
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(MethodInfo methodInfo, Type type) in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 56
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context) in D:\Github\aspnetboilerplate\src\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+WARN  2020-01-05 17:38:01,132 [10   ] Mvc.Authorization.AbpAuthorizationFilter - Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(IEnumerable`1 authorizeAttributes) in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 42
+   at Abp.Authorization.AuthorizationHelper.CheckPermissions(MethodInfo methodInfo, Type type) in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 107
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(MethodInfo methodInfo, Type type) in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 56
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context) in D:\Github\aspnetboilerplate\src\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(IEnumerable`1 authorizeAttributes) in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 42
+   at Abp.Authorization.AuthorizationHelper.CheckPermissions(MethodInfo methodInfo, Type type) in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 107
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(MethodInfo methodInfo, Type type) in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 56
+   at Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context) in D:\Github\aspnetboilerplate\src\Abp.AspNetCore\AspNetCore\Mvc\Authorization\AbpAuthorizationFilter.cs:line 53
+INFO  2020-01-05 17:38:01,167 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter'.
+INFO  2020-01-05 17:38:01,167 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Authorization.AbpAuthorizationFilter'.
+INFO  2020-01-05 17:38:01,211 [12   ] Microsoft.AspNetCore.Mvc.ChallengeResult - Executing ChallengeResult with authentication schemes ().
+INFO  2020-01-05 17:38:01,211 [10   ] Microsoft.AspNetCore.Mvc.ChallengeResult - Executing ChallengeResult with authentication schemes ().
+INFO  2020-01-05 17:38:01,286 [10   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was challenged.
+INFO  2020-01-05 17:38:01,286 [12   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was challenged.
+INFO  2020-01-05 17:38:01,295 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action HTO.Web.Controllers.HomeController.Index (HTO.Web.Mvc) in 1148.7382ms
+INFO  2020-01-05 17:38:01,295 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action HTO.Web.Controllers.HomeController.Index (HTO.Web.Mvc) in 1148.7364ms
+INFO  2020-01-05 17:38:02,077 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9153.2038ms 302 
+INFO  2020-01-05 17:38:02,077 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9210.2685ms 302 
