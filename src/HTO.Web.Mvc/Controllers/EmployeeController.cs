@@ -18,8 +18,7 @@ namespace HTO.Web.Mvc.Controllers
         }
         public IActionResult Index()
         {
-            _baseEmployeeAppService.Create();
-            return View();
+            return View(_baseEmployeeAppService.GetTableViewModels());
         }
     }
 }

@@ -18,5 +18,10 @@ namespace HTO.EntityFrameworkCore
             : base(options)
         {
         }
+        protected override void OnConfiguring(DbContextOptionsBuilder builder)
+        {
+            builder.UseSqlServer("Server=localhost; Database=HTODb; Trusted_Connection=True;");
+            base.OnConfiguring(builder);
+        }
     }
 }

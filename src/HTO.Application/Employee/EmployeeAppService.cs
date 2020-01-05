@@ -3,6 +3,7 @@ using HTO.Employee.Dto;
 using HTO.EntityFrameworkCore.Repositories;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace HTO.Employee
@@ -19,6 +20,11 @@ namespace HTO.Employee
             _objectMapper = objectMapper;
         }
 
+        public override void Create(EmployeeManageDto model)
+        {
+            throw new NotImplementedException();
+        }
+
         public override void Delete(int id)
         {
             throw new NotImplementedException();
@@ -28,19 +34,32 @@ namespace HTO.Employee
         {
             throw new NotImplementedException();
         }
+        
+        public override IEnumerable<EmployeeDto> GetTableViewModels()
+        {
+            var model = _unitOfWork.EmployeeRepo.Set()
+                .Where(a => !a.IsDeleted)
+                .Select(a => new EmployeeDto
+                {
+                    Id = a.Id,
+                    Name = a.Name,
+                    SurName = a.SurName,
+                    BirthDate = a.BirthDate, 
+                    PersonalId = a.PersonalId,
+                    Nationality = a.Nationality
+                }).OrderByDescending(a => a.Id).ToList();
 
-        public override void Save(EmployeeDto model)
+            return model;
+        }
+
+
+
+        public override void Save(EmployeeManageDto model)
         {
             throw new NotImplementedException();
         }
 
-        public override void Create()
-        {
-            var employee = new EntityFrameworkCore.Entities.Employee();
-
-        }
-
-        public override void Update(EmployeeDto model)
+        public override void Update(EmployeeManageDto model)
         {
             throw new NotImplementedException();
         }

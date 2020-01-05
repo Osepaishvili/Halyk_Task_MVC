@@ -6,7 +6,7 @@ using System.Text;
 
 namespace HTO.Employee
 {
-    public abstract class BaseEmployeeAppService : GeneralAdminService<EmployeeDto>
+    public abstract class BaseEmployeeAppService : GeneralAdminService<EmployeeManageDto, EmployeeDto>
     {
 
     }

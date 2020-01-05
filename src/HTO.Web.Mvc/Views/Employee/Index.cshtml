@@ -37,27 +37,27 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @*@foreach (var user in Model)
+                        @foreach (var employee in Model)
                         {
                             <tr>
-                                <td>@user.Name</td>
-                                <td>@user.SurName</td>
-                                <td>@user.PersonalId</td>
-                                <td>@user.BirthDate</td>
-                                <td>@user.Nationality</td>
+                                <td>@employee.Name</td>
+                                <td>@employee.SurName</td>
+                                <td>@employee.PersonalId</td>
+                                <td>@employee.BirthDate</td>
+                                <td>@employee.Nationality</td>
 
-                                <td><i class="material-icons" style="color:@(user.IsActive ? "green":"red");">@(user.IsActive ? "check_box" : "indeterminate_check_box")</i></td>
-                                    <td class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                            <i class="material-icons">menu</i>
-                                        </a>
-                                        <ul class="dropdown-menu pull-right">
-                                            <li><a href="#" class="waves-effect waves-block edit-user" data-user-id="@user.Id" data-toggle="modal" data-target="#UserEditModal"><i class="material-icons">edit</i>@L("Edit")</a></li>
-                                            <li><a href="#" class="waves-effect waves-block delete-user" data-user-id="@user.Id" data-user-name="@user.UserName"><i class="material-icons">delete_sweep</i>@L("Delete")</a></li>
-                                        </ul>
-                                    </td>
+
+                                <td class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons">menu</i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="#" class="waves-effect waves-block edit-user" data-user-id="@employee.Id" data-toggle="modal" data-target="#UserEditModal"><i class="material-icons">edit</i>@L("Edit")</a></li>
+                                        <li><a href="#" class="waves-effect waves-block delete-user" data-user-id="@employee.Id" data-user-name="@employee.Name"><i class="material-icons">delete_sweep</i>@L("Delete")</a></li>
+                                    </ul>
+                                </td>
                             </tr>
-                        }*@
+                        }
                     </tbody>
                 </table>
                 <button type="button" class="btn btn-primary btn-circle waves-effect waves-circle waves-float pull-right" data-toggle="modal" data-target="#UserCreateModal">
@@ -154,12 +154,12 @@
                             <div class="row">
                                 <div class="col-sm-12 ">
                                     @*@foreach (var role in Model.Roles)
-                                    {
-                                        <div class="col-sm-6">
-                                            <input type="checkbox" name="role" value="@role.NormalizedName" title="@role.Description" class="filled-in" id="role-@role.Id" />
-                                            <label for="role-@role.Id" title="@role.DisplayName">@role.Name</label>
-                                        </div>
-                                    }*@
+                                        {
+                                            <div class="col-sm-6">
+                                                <input type="checkbox" name="role" value="@role.NormalizedName" title="@role.Description" class="filled-in" id="role-@role.Id" />
+                                                <label for="role-@role.Id" title="@role.DisplayName">@role.Name</label>
+                                            </div>
+                                        }*@
                                 </div>
                             </div>
                         </div>

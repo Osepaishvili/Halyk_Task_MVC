@@ -4,13 +4,15 @@ using System.Text;
 
 namespace HTO.Services
 {
-    public abstract class GeneralAdminService<TEntity>
+    public abstract class GeneralAdminService<TEntity, UEntity>
             where TEntity : class
+            where UEntity : class
     {
+        public abstract IEnumerable<UEntity> GetTableViewModels();
 
         public abstract void Save(TEntity model);
 
-        public abstract void Create();
+        public abstract void Create(TEntity model);
 
         public abstract void Update(TEntity model);
 
