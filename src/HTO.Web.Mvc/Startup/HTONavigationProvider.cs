@@ -44,6 +44,14 @@ namespace HTO.Web.Startup
                         icon: "local_offer",
                         requiredPermissionName: PermissionNames.Pages_Roles
                     )
+                ).AddItem(
+                    new MenuItemDefinition(
+                        PageNames.Employee,
+                        L("Employee"),
+                        url: "Employee",
+                        icon: "group_add",
+                        requiredPermissionName: PermissionNames.Pages_Roles
+                    )
                 )
                 .AddItem(
                     new MenuItemDefinition(

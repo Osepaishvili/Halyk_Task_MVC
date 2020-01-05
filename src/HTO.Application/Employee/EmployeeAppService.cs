@@ -34,13 +34,13 @@ namespace HTO.Employee
             throw new NotImplementedException();
         }
 
-        protected override void Create()
+        public override void Create()
         {
             var employee = new EntityFrameworkCore.Entities.Employee();
 
         }
 
-        protected override void Update(EmployeeDto model)
+        public override void Update(EmployeeDto model)
         {
             throw new NotImplementedException();
         }
