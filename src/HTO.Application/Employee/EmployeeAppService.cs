@@ -20,21 +20,44 @@ namespace HTO.Employee
             _objectMapper = objectMapper;
         }
 
-        public override void Create(EmployeeManageDto model)
+        protected override void Create(EmployeeManageDto model)
         {
-            throw new NotImplementedException();
+            var employee = new HTO.EntityFrameworkCore.Entities.Employee
+            {
+                Name = model.Name,
+                SurName = model.SurName,
+                Nationality = model.Nationality,
+                BirthDate = model.BirthDate,
+                PersonalId = model.PersonalId
+            };
+
+            //foreach (var phone in model.PhoneNumbers)
+            //{
+            //    var number = new HTO.EntityFrameworkCore.Entities.Phone
+            //    {
+            //        Number = phone
+            //    };
+            //}
+
+            _unitOfWork.EmployeeRepo.Insert(employee);
+            _unitOfWork.Save();
         }
 
         public override void Delete(int id)
         {
-            throw new NotImplementedException();
+            var dboEmployee = _unitOfWork.EmployeeRepo.GetById(id);
+
+            dboEmployee.IsDeleted = true;
+
+            _unitOfWork.EmployeeRepo.Update(dboEmployee);
+            _unitOfWork.Save();
         }
 
         public override void Dispose()
         {
-            throw new NotImplementedException();
+            _unitOfWork.Dispose();
         }
-        
+
         public override IEnumerable<EmployeeDto> GetTableViewModels()
         {
             var model = _unitOfWork.EmployeeRepo.Set()
@@ -44,7 +67,7 @@ namespace HTO.Employee
                     Id = a.Id,
                     Name = a.Name,
                     SurName = a.SurName,
-                    BirthDate = a.BirthDate, 
+                    BirthDate = a.BirthDate,
                     PersonalId = a.PersonalId,
                     Nationality = a.Nationality
                 }).OrderByDescending(a => a.Id).ToList();
@@ -52,16 +75,27 @@ namespace HTO.Employee
             return model;
         }
 
-
-
         public override void Save(EmployeeManageDto model)
         {
-            throw new NotImplementedException();
+            if (model.Id == 0)
+                Create(model);
+            else
+                Update(model);
         }
 
-        public override void Update(EmployeeManageDto model)
+        protected override void Update(EmployeeManageDto model)
         {
-            throw new NotImplementedException();
+            var dboEmployee = _unitOfWork.EmployeeRepo.Set()
+                .First(a => a.Id == model.Id);
+
+            dboEmployee.Name = model.Name;
+            dboEmployee.SurName = model.SurName;
+            dboEmployee.Nationality = model.Nationality;
+            dboEmployee.BirthDate = model.BirthDate;
+            dboEmployee.PersonalId = model.PersonalId;
+
+            _unitOfWork.EmployeeRepo.Update(dboEmployee);
+            _unitOfWork.Save();
         }
     }
 }

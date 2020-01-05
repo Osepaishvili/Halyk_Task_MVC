@@ -12,9 +12,9 @@ namespace HTO.Services
 
         public abstract void Save(TEntity model);
 
-        public abstract void Create(TEntity model);
+        protected abstract void Create(TEntity model);
 
-        public abstract void Update(TEntity model);
+        protected abstract void Update(TEntity model);
 
         public abstract void Delete(int id);
 
