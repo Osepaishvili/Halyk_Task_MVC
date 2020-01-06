@@ -1,0 +1,86 @@
+﻿@using HTO.Employee.Dto
+@using HTO.EntityFrameworkCore.Entities
+
+@model EmployeeManageDto
+@{
+    ViewData["Title"] = "Manage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row clearfix">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <a asp-controller="Employee" asp-action="Index" style="padding-left:90%">უკან დაბრუნება</a>
+        <div class="card">
+            <div class="header">
+                @if (Model.Id == 0)
+                {
+                    <h2>
+                        თანამშრომლის დამატება
+                    </h2>
+                }
+                else
+                {
+                    <h2>
+                        თანამშრომლის რედაქტირება
+                    </h2>
+                }
+            </div>
+            <div class="body">
+                <form asp-action="Save" method="post" enctype="multipart/form-data">
+                    <input type="hidden" asp-for="Id" />
+
+                    <div class="row clearfix">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <div class="card">
+                                <div class="header">
+                                    <h2>
+                                    </h2>
+                                </div>
+                                <div class="body">
+                                    <div class="row clearfix">
+                                        <div class="col-md-6">
+                                            <label>სახელი</label>
+                                            @Html.TextBoxFor(x => x.Name)
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>გვარი</label>
+                                            @Html.TextBoxFor(x => x.SurName)
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label>დაბადების თარიღი</label>
+                                            @Html.TextBoxFor(x => x.BirthDate)
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label>პირადი ნომერი</label>
+                                            @Html.TextBoxFor(x => x.PersonalId)
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label>ეროვნება</label>
+                                            @Html.TextBoxFor(x => x.Nationality)
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>ხელფასი</label>
+                                            @Html.TextBoxFor(x => x.Salary)
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>ხელფასის ვალუტა</label>
+                                            @Html.TextBoxFor(x => x.Currency)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="saveButtonCenter">
+                        <button type="submit" class="btn bg-orange waves-effect">
+                            <i class="material-icons">save</i>
+                            <span>შენახვა</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

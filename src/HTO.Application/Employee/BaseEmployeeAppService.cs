@@ -8,6 +8,9 @@ namespace HTO.Employee
 {
     public abstract class BaseEmployeeAppService : GeneralAdminService<EmployeeManageDto, EmployeeDto>
     {
+        public abstract EmployeeManageDto GetViewModel(int id);
+
+        public abstract void FillManageDtoWithInitialData(EmployeeManageDto model);
 
     }
 }

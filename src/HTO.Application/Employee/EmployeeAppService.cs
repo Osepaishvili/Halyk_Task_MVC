@@ -28,7 +28,9 @@ namespace HTO.Employee
                 SurName = model.SurName,
                 Nationality = model.Nationality,
                 BirthDate = model.BirthDate,
-                PersonalId = model.PersonalId
+                PersonalId = model.PersonalId,
+                Salary = model.Salary,
+                Currency = model.Currency
             };
 
             //foreach (var phone in model.PhoneNumbers)
@@ -93,9 +95,39 @@ namespace HTO.Employee
             dboEmployee.Nationality = model.Nationality;
             dboEmployee.BirthDate = model.BirthDate;
             dboEmployee.PersonalId = model.PersonalId;
+            dboEmployee.Salary = model.Salary;
+            dboEmployee.Currency = model.Currency;
 
             _unitOfWork.EmployeeRepo.Update(dboEmployee);
             _unitOfWork.Save();
+        }
+
+        public override EmployeeManageDto GetViewModel(int id)
+        {
+            var model = new EmployeeManageDto();
+
+            if (id == 0)
+                return model;
+
+            var dboEmployee = _unitOfWork.EmployeeRepo.Set()
+                .First(a => a.Id == id);
+
+            model.Id = dboEmployee.Id;
+            model.BirthDate = dboEmployee.BirthDate;
+            model.Currency = dboEmployee.Currency;
+            model.Name = dboEmployee.Name;
+            model.SurName = dboEmployee.SurName;
+            model.Salary = dboEmployee.Salary;
+            model.PersonalId = dboEmployee.PersonalId;
+            model.Nationality = dboEmployee.Nationality;
+
+            return model;
+        }
+
+        public override void FillManageDtoWithInitialData(EmployeeManageDto model)
+        {
+            //დროპდაუნების ჩამატება თუ დამჭირდება
+            throw new NotImplementedException();
         }
     }
 }

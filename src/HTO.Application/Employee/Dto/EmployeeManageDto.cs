@@ -25,7 +25,6 @@ namespace HTO.Employee.Dto
 
         public decimal Salary { get; set; }
 
-
         public string Currency { get; set; }
 
         public List<string> PhoneNumbers { get; set; }
